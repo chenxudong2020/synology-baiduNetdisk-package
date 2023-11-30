@@ -10,10 +10,10 @@ case $1 in
         exit 0
     ;;
     log)
-        /bin/curl -v 127.0.0.1:6900 -o /dev/null
+        /bin/curl -v 127.0.0.1:8096 -o /dev/null
     ;;
     status)
-        /bin/curl -s 127.0.0.1:6900 -o /dev/null
+        /bin/curl -s 127.0.0.1:8096 -o /dev/null
     ;;
     *)
         echo "Usage: $0 {start|stop|status}"
