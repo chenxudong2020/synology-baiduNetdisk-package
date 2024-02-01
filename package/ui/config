@@ -5,8 +5,8 @@
             "desc": "overtls",
             "icon": "images/icon_{0}.png",
             "type": "url",
-            "protocol": "http",
-            "port": "8087",
+            "protocol": "https",
+            "port": "8088",
             "allUsers": false
         }
     }
