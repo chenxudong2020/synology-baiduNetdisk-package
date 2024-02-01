@@ -1,14 +1,13 @@
 {
     ".url": {
-        "SYNO.SDS.xiaoyaemby": {
-            "type": "url",
-            "allUsers": false,
-            "title": "小雅Emby",
-            "desc": "小雅Emby - 群晖套件",
+        "SYNO.SDS.docker-lobechat.Application": {
+            "title": "LobeChat",
+            "desc": "LobeChat",
             "icon": "images/icon_{0}.png",
+            "type": "url",
             "protocol": "http",
-            "url": "/",
-            "port": "8096"
+            "port": "13210",
+            "allUsers": false
         }
     }
 }

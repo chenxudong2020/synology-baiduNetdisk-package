@@ -1,23 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 
-case $1 in
+DOCKER_NAME="lobe-chat"
+DOCKER_INSPECT="/usr/local/bin/docker_inspect"
+
+case "$1" in
     start)
-        ### Start this package.
-        exit 0
-    ;;
+        # docker start "$DOCKER_NAME"
+        ;;
     stop)
-        ### Stop this package.
-        exit 0
-    ;;
-    log)
-        /bin/curl -v 127.0.0.1:8096 -o /dev/null
-    ;;
+        # docker stop "$DOCKER_NAME"
+        ;;
     status)
-        /bin/curl -s 127.0.0.1:8096 -o /dev/null
-    ;;
+        "$DOCKER_INSPECT" "$DOCKER_NAME" | grep -q "\"Status\": \"running\"," || exit 1
+        ;;
+    log)
+        echo ""
+        ;;
     *)
-        echo "Usage: $0 {start|stop|status}"
-        exit 0
-    ;;
+        echo "Usage: $0 {start|stop|status}" >&2
+        exit 1
+        ;;
 esac
 
+exit 0

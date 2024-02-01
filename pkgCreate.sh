@@ -7,6 +7,6 @@ tar -czf package.tgz --owner=0 --group=0 ./package/*
 rm -rf build/
 mkdir -p build/
 mkdir -p conf/
-tar -cvf "build/xiaoyaemby-${pkg_version}.spk" --owner=0 --group=0 scripts/* INFO PACKAGE_ICON.PNG PACKAGE_ICON_256.PNG package.tgz conf/
+tar -cvf "build/lobechat-${pkg_version}.spk" --owner=0 --group=0 scripts/* INFO PACKAGE_ICON.PNG PACKAGE_ICON_256.PNG package.tgz conf/
 rm -f package.tgz
 mv .INFO INFO

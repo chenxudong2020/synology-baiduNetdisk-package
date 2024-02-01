@@ -1,3 +1,34 @@
 {
-	"service-cfg": {}
+  "docker": {
+    "services": [
+      {
+        "service": "lobe-chat",
+        "image": "lobehub/lobe-chat",
+        "container_name": "lobe-chat",
+        "tag": "latest",
+        "restart": "always",
+        "environment": [
+          {
+            "env_var": "OPENAI_API_KEY",
+            "env_value": "{{wizard_key}}"
+          },
+          {
+            "env_var": "OPENAI_PROXY_URL",
+            "env_value": "{{wizard_proxy}}"
+          },
+          {
+            "env_var": "ACCESS_CODE",
+            "env_value": "{{wizard_password}}"
+          }
+        ],
+        "ports": [
+          {
+            "host_port": "13210",
+            "container_port": "3210",
+            "protocol": "tcp"
+          }
+        ]
+      }
+    ]
+  }
 }
