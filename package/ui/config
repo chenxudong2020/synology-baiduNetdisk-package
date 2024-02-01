@@ -1,12 +1,12 @@
 {
     ".url": {
-        "SYNO.SDS.docker-lobechat.Application": {
-            "title": "LobeChat",
-            "desc": "LobeChat",
+        "SYNO.SDS.docker-overtls.Application": {
+            "title": "overtls",
+            "desc": "overtls",
             "icon": "images/icon_{0}.png",
             "type": "url",
             "protocol": "http",
-            "port": "13210",
+            "port": "8087",
             "allUsers": false
         }
     }

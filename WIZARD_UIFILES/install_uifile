@@ -1,37 +1,15 @@
 [{
-	"step_title": "LobeChat 配置",
-	"items": [{
-			"type": "textfield",
-			"desc": "OpenAI的API密钥",
-			"subitems": [{
-				"key": "wizard_key",
-				"desc": "",
-				"defaultValue": "",
-				"validator": {
-					"allowBlank": false
-				}
-			}]
-		},
+	"step_title": "overtls 配置",
+	"items": [
 		{
 			"type": "textfield",
-			"desc": "OpenAI接口代理",
+			"desc": "TUNNEL_PATH",
 			"subitems": [{
-				"key": "wizard_proxy",
+				"key": "TUNNEL_PATH",
 				"desc": "",
-				"defaultValue": "https://api.openai-proxy.com/v1"
-			}]
-		},
-		{
-			"type": "textfield",
-			"desc": "访问密码",
-			"subitems": [{
-				"key": "wizard_password",
-				"desc": "",
-				"defaultValue": "",
-				"validator": {
-					"allowBlank": false
-				}
+				"defaultValue": "/secret-tunnel-path/"
 			}]
 		}
+		
 	]
 }]

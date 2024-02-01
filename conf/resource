@@ -2,32 +2,37 @@
   "docker": {
     "services": [
       {
-        "service": "lobe-chat",
-        "image": "lobehub/lobe-chat",
-        "container_name": "lobe-chat",
+        "service": "overtls",
+        "image": "registry.cn-hangzhou.aliyuncs.com/dubux/overtls",
+        "container_name": "overtls",
         "tag": "latest",
         "restart": "always",
         "environment": [
           {
-            "env_var": "OPENAI_API_KEY",
-            "env_value": "{{wizard_key}}"
-          },
-          {
-            "env_var": "OPENAI_PROXY_URL",
-            "env_value": "{{wizard_proxy}}"
-          },
-          {
-            "env_var": "ACCESS_CODE",
-            "env_value": "{{wizard_password}}"
+            "env_var": "TUNNEL_PATH",
+            "env_value": "{{TUNNEL_PATH}}"
           }
         ],
         "ports": [
           {
-            "host_port": "13210",
-            "container_port": "3210",
+            "host_port": "8088",
+            "container_port": "443",
+            "protocol": "tcp"
+          },
+          {
+            "host_port": "8087",
+            "container_port": "80",
             "protocol": "tcp"
           }
-        ]
+        ],
+        "shares": [{
+          "host_dir": "web",
+          "mount_point": "/web"
+          }, {
+          "host_dir": "cert",
+          "mount_point": "/cert"
+          }]        
+
       }
     ]
   }
