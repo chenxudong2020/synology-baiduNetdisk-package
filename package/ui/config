@@ -6,8 +6,7 @@
             "icon": "images/icon_{0}.png",
             "type": "url",
             "protocol": "http",
-            "url": "/ui",
-            "port": "9090",
+            "port": "8087",
             "allUsers": false
         }
     }
