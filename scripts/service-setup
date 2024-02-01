@@ -7,8 +7,8 @@ if [ -z "${SYNOPKG_PKGNAME}" ] || [ -z "${SYNOPKG_DSM_VERSION_MAJOR}" ]; then
   exit 1
 fi
 
-USER="docker-overtls"
-EFF_USER="docker-overtls"
+USER="docker-chislash"
+EFF_USER="docker-chislash"
 
 # start-stop-status script redirect stdout/stderr to LOG_FILE
 LOG_FILE="${SYNOPKG_PKGVAR}/${SYNOPKG_PKGNAME}.log"

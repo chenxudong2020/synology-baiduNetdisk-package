@@ -1,13 +1,49 @@
 [{
-	"step_title": "overtls 配置",
+	"step_title": "chislash 配置",
 	"items": [
 		{
 			"type": "textfield",
-			"desc": "TUNNEL_PATH",
+			"desc": "订阅更新周期",
 			"subitems": [{
-				"key": "TUNNEL_PATH",
-				"desc": "",
-				"defaultValue": "/secret-tunnel-path/"
+				"key": "CRON",
+				"desc": "单位分钟",
+				"defaultValue": "30",
+				"validator": {
+					"allowBlank": false
+				}
+			}]
+		},
+		{
+			"type": "textfield",
+			"desc": "网页/ui访问的secret，请修改",
+			"subitems": [{
+				"key": "SECRET_VALUE",
+				"desc": "默认：chislash",
+				"defaultValue": "chislash"
+			}]
+		},
+		{
+			"type": "textfield",
+			"desc": "HTTP和Socks5代理用户名和密码，请修改",
+			"subitems": [{
+				"key": "AUTHENTICATION",
+				"desc": "默认值：chislash:chislash",
+				"defaultValue": "chislash:chislash",
+				"validator": {
+					"allowBlank": false
+				}
+			}]
+		},
+		{
+			"type": "textfield",
+			"desc": "机场订阅链接",
+			"subitems": [{
+				"key": "SUBSCR_URLS",
+				"desc": "注意不要前后带空格",
+				"defaultValue": "",
+				"validator": {
+					"allowBlank": false
+				}
 			}]
 		}
 		

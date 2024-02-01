@@ -1,12 +1,12 @@
 {
     ".url": {
-        "SYNO.SDS.docker-overtls.Application": {
-            "title": "overtls",
-            "desc": "overtls",
+        "SYNO.SDS.docker-chislash.Application": {
+            "title": "chislash",
+            "desc": "chislash",
             "icon": "images/icon_{0}.png",
             "type": "url",
-            "protocol": "https",
-            "port": "8088",
+            "protocol": "http",
+            "port": "9090",
             "allUsers": false
         }
     }
